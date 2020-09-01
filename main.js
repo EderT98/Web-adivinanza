@@ -1,7 +1,11 @@
 
 
 var respuesta = "blanco";
+var respuesta_2 = "64"
+var respuesta_22 = "sesenta y cuatro"
 var contador = 0; 
+var contador_2 = 0; 
+var adv, adv2 = false;
 
 function Verificar() {
 	
@@ -13,14 +17,17 @@ function Verificar() {
 
     if(rta == respuesta){
 
-      alert('Correcto');
+      document.getElementById("result").innerHTML =
+        "<span class='alert alert-success'>Correcto</span>";
+
+      var adv = true;
 
     }else{
         
         
        
-        alert('Incorrecto');    
-        
+        document.getElementById("result").innerHTML = "<span class='alert alert-danger'>Error</span>";   
+
         contador++;
 
         if( contador < 4 ){
@@ -40,3 +47,46 @@ function Verificar() {
 
     };  
 };
+
+
+function Verifiacar_2(){
+
+  var rst = document.getElementById("resp_2").value;
+  rst = rst.toLowerCase();
+
+  if (rst === respuesta_2 || rst === respuesta_22){
+
+     document.getElementById("result_2").innerHTML =
+       "<span class='alert alert-success'>Correcto</span>";   
+
+    var adv2 = true;
+
+  }else{
+     document.getElementById("result_2").innerHTML =
+       "<span class='alert alert-danger'>Error</span>";   
+
+
+    contador_2++;
+
+    if (contador_2 < 4) {
+      if (contador_2 == 2) {
+        document.getElementById("pista_12").innerText = "1- Esta entre 60 y 70";
+      }
+      if (contador_2 == 3) {
+        document.getElementById("pista_22").innerText =
+          "2- Esta entre 60 y 65";
+      }
+    } else {
+
+      alert("Te quedaste sin intentos!");
+      document.getElementById("boton_2").disabled = true;
+
+    }
+
+    document.getElementById("intentos_2").innerText = (4 - contador_2);
+  }
+}
+
+if (adv && adv2){
+  document.getElementById("camp").innerText = "Sos el ganador definitivo!";
+}
