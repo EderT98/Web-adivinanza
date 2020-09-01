@@ -15,32 +15,8 @@
 
 <body>
 
-    <div class="main text-center mt-5">
-        
-        <!-- <div class="pregunta">
-            <p>De que color es el caballo de San Martin?</p>
-            <p>Restuesta: </p>
-        </div> -->
-         
-        
-        <!-- <input type="text" id="resp"><br> -->
-
-
-        <!-- <div class="cont_intentos">
-            <p>Intentos: <span id="intentos">4</span></p>
-        </div> -->
-        
-        <!-- <button id="boton" onclick="Verificar()" enabled>Verificar</button> -->
-
-        
-        <!-- <h2 id="correcto"></h2> -->
-
-        
- 
-
-
   <!-- Tarjeta -->
-    <div class="card text-center"></div>
+    <div class="card text-center">
         <div class="card-header">
             <p>Intentos: <span id="intentos">4</span></p>
         </div>
@@ -49,18 +25,42 @@
             <div class="pista">
                 <p id="pista1"></p>
                 <p id="pista2"></p>
+                <p id="respTrue"></p>
             </div>
             <input class="card-text" id="resp"></input>
             <button class="btn-primary" id="boton" onclick="Verificar()">Enviar Respuesta</button>
         </div> 
             <div class="card-footer text-muted">
                 <div class="resultados" id="result">
-                    <span class="alert-success" id="correcto"></span> 
-                    <span class="alert-danger" id="incorrecto"></span>
+                    
                 </div>      
             </div>
         </div>
     </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card text-center">
+        <div class="card-header">
+            <p>Intentos: <span id="intentos_2">4</span></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Cuanto es 8x8?</h5>
+            <div class="pista_2">
+                <p id="pista_12"></p>
+                <p id="pista_22"></p>
+                <p id="respTrue_2"></p>
+            </div>
+            <input class="card-text" id="resp_2"></input>
+            <button class="btn-primary" id="boton_2" onclick="Verifiacar_2()">Enviar Respuesta</button>
+        </div> 
+            <div class="card-footer text-muted">
+                <div class="resultados" id="result_2">
+                </div>      
+            </div>
+        </div>
+    </div>
+
+    <h1 id="camp"></h1>
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
