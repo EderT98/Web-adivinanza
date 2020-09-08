@@ -13,10 +13,15 @@
     
 </head>
 
-<body>
-
+<body style="background-image: url('img/img1.jpg'); background-size: cover;">
+    <div class="container d-flex h-100 align-items-center">
+        <h1 class="mx-auto my-0 mt-4 text-uppercase"
+        style="color: #d55524;">
+            Adivinanza
+        </h1>
+    </div>
   <!-- Tarjeta -->
-    <div class="card text-center">
+    <div class="card text-center mt-5" style="width: 24rem; margin: 0 auto;">
         <div class="card-header">
             <p>Intentos: <span id="intentos">4</span></p>
         </div>
@@ -39,7 +44,7 @@
     </div>
 
     <!-- Tarjeta 2 -->
-    <div class="card text-center">
+    <div class="card text-center mt-5" style="width: 24rem; margin: 0 auto;">
         <div class="card-header">
             <p>Intentos: <span id="intentos_2">4</span></p>
         </div>
@@ -60,7 +65,9 @@
         </div>
     </div>
 
-    <h1 id="camp"></h1>
+   <div class="text-center mt-5" style="margin: 0 auto;">
+       <button type="button" class="btn btn-outline-success" onclick="location.reload()">Recargar</button>
+   </div>
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>

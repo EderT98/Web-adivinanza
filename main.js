@@ -3,8 +3,7 @@ var respuesta_2 = "64";
 var respuesta_22 = "sesenta y cuatro";
 var contador = 0;
 var contador_2 = 0;
-var adv,
-  adv2 = false;
+var adv,adv2 = false;
 
 function Verificar() {
   var rta = document.getElementById("resp").value;
@@ -14,6 +13,7 @@ function Verificar() {
   console.log(rta);
 
   if (rta == respuesta) {
+
     document.getElementById("result").innerHTML =
       "<span class='alert alert-success'>Correcto</span>";
 
@@ -49,7 +49,7 @@ function Verifiacar_2() {
   if (rst === respuesta_2 || rst === respuesta_22) {
     document.getElementById("result_2").innerHTML =
       "<span class='alert alert-success'>Correcto</span>";
-
+    
     var adv2 = true;
   } else {
     document.getElementById("result_2").innerHTML =
